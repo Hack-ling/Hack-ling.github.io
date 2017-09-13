@@ -1,88 +1,106 @@
-html,
-body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 14px;
-  font-family: "Helvetica Neue",Helvetica,Arial,Sans-serif;
-  font-weight: 300;
-  text-align: center;
-  cursor: default;
-
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-
-  -ms-touch-action: none;
+#background {
+    width: 100%;
+    height: 101%;
+        
+}
+#middleText {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -90%);
 }
 
-div {
-  cursor: inherit;
+#scrollingtext {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    font-size: 3em;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #eee;
+    text-shadow:
+   .75px .75px 0 #000,  
+    .75px .75px 0 #000,
+    .75px .75px 0 #000,
+     .75px .75px 0 #000;
 }
 
-a {
-  color: steelBlue;
-  text-decoration: none;
+#logo>* {
+    display: inline-block;
+    font-size: 3em;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #eee;
+    -webkit-text-stroke: .75px black;
 }
 
-a:hover {
-  text-decoration: underline;
+
+
+#profileLinks {
+    position: relative;
+    transform: translate(0, 25px);
 }
 
-#center {
-  position: relative;
-  height: 100%;
-  width: 512px;
-  margin: 0 auto;
+#steamandyoutubelinks {
+    position: relative;
+    transform: translate(0, 130px);
+    color: #eee
+    background-color: #212121
+}
+.rightAlign2,
+.leftAlign2 {
+    position: absolute;
+    margin-left: 13px;
+    margin-right: 5px;
 }
 
-#cont {
-  position: absolute;
-  top: 50%;
-  margin-top: -270px;
-  width:  512px;
-  height: 570px;
+.rightAlign2 {
+    right: 0;
 }
 
-#dot {
-  width:  512px;
-  height: 512px;
+.blockDisplay {
+    display: block;
 }
 
-svg,
-circle {
-  pointer-events: none;
+#middleText h1 {
+    text-align: center;
+}
+.white-button {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+.black-button {
+     color: #eee;
+     background-color: #212121;
+}
+.button {
+    text-decoration: none;
+    padding: 5px;
+    font-family: "Roboto";
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 50);
+
 }
 
-#next {
-  padding-top: 30px;
+.rightAlign,
+.leftAlign {
+    position: absolute;
+    margin-left: 80px;
+    margin-right: 7px;
 }
 
-#next input {
-  width: 480px;
-  border: 1px solid #ccc;
-  outline: none;
+.rightAlign {
+    right: 0;
+}
+.no-link {
+text-decoration: none;
+color: #fff;
 }
 
-#next .err {
-  color: red;
+#edgif {
+    position:absolute;
+    left:50%;
+    top:75%;
+    transform: translate(-50%,-50%);
+    border-radius:5px
 }
 
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-top: 18px;
-  padding-bottom: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
-  background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-}
-
-div.not-found {
-  text-align: center;
-  margin-top: 200px;
-  font-size: 32px;
-}

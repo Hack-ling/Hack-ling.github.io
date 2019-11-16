@@ -1,135 +1,158 @@
-<head>
-   <title></title>
-   <title></title>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="description" content="">
-   <meta name="keywords" content="">
-   <meta name="author" content="">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" href="assets/css/main.css" />
-   <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
-   <link rel='stylesheet' href='assets/css/vendor.css'>
-   <link rel='stylesheet' href='assets/css/theme_black_red.css' id="theme">
-   <link rel='stylesheet' href='assets/css/custom.css'>
-   <link rel='stylesheet' href='assets/css/demo.css'>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-   <script src='assets/js/vendor/html5shiv.min.js'></script>
-   <link rel="icon" type="image/ico" href="assets/images/icon.png"/>
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+      
+    <style>
+        .hid {
+            display: none !important;
+        }
+
+        video {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .unhid {}
+    </style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="theme-color" content="#3b3b3b">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="averion.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="animate.min.css">
+	<link rel="stylesheet" href="js.css">
+	<link rel="stylesheet" type="text/css" href="star-animation.css">
+	<link rel="stylesheet" href="css.css">
+	            <div class="bg-animation">
+               <div id="stars"></div>
+               <div id="stars2"></div>
+               <div id="stars3"></div>
+               <div id="stars4"></div>
+            </div>
+			<script>
+	    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }</script>
+    <script>document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);</script>
+    <!––add all the brackets in under this––>
+<div class="overlay"><marquee bgcolor="black" height="60" scrollamount="35">                                                                                                                              </marquee></div>
 </head>
-<body onLoad="scrlsts()">
-   <div class="site-loader">
-      <span></span>
-      <p>Loading...</p>
-   </div>
-   <div class="pmeme">
-      <video id="video" autoplay="autoplay" loop="loop" onloadstart="this.volume=0.2">
-         <source src="https://a.doko.moe/vyjxhz.mp4" type="video/mp4"></source>
-      </video>
-   </div>
-   <div class="site-bg">
-      <div class="site-bg__overlay"></div>
-      <div class="site_countdown"></div>
-      <div class="site-bg__effect"></div>
-      <canvas class="site-bg__canvas"></canvas>
-   </div>
-   </header>
-   <div class="loading">
-      <div id="wrapper">
-         <div id="main">
-            <header id="header">
-               <h1>Hackling</h1>
-                  <h2><font size="2">Powered by game</font><font size="2" color="#6CC312">sense</font></h2>
-               <nav>
-                  <ul>
-                     <li><a href="https://www.youtube.com/channel/UCZKVM8RlPoowbhdAml1D10Q" class="fa fa-youtube-play" target="_blank"><span class="label">Youtube</span></a></li>
-                     <li><a href="https://www.steamcommunity.com/id/cartridges/" class="icon fa-steam" target="_blank"><span class="label">Steam</span></a></li>
-                     <li><a href="http://nyaaaura.pw" class="fa fa-heart-o" target="_blank"><span class="label">Emily</span></a></li>
-                  </ul>
-               </nav>
-            </header>
-         </div>
-      </div>
-   </div>
-   <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-   <script src='assets/js/vendor/bootstrap.min.js'></script>
-   <script src='assets/js/vendor/plugin.js'></script>
-   <script src='assets/js/variable.js'></script>
-<script src="assets/js/title.js"></script>
-   <script src='assets/js/main.js'></script>
-   <script src='assets/js/demo.js'></script>
+
+<body>
+			<video loop id="player" class ="hid">
+            <source src="bg.mp4" type="video/mp4">  
+        	</video>
+<!--CSS Spinner-->
+<div class="cssload-container">
+	<div class="cssload-item cssload-moon"></div>
+</div>
+
+	<div class="container" style="height: 100%; display: flex; align-items: center; margin: 0 auto; padding-top: 3rem;">
+		<main>
+		<div class="animated fadeInUp delay-250">
+			</div>
+			<div class="animated fadeInUp">
+                <H1 class="hid" ><a href="http://steamcommunity.com/id/progesterone/" target="_blank">emily</a> x <a href="http://steamcommunity.com/id/cartridges/" class="hid" target="_blank"> hazel</a></H1></div>
+<div class="animated fadeInUp"></div>
+		<font face="courier">
+		<div class="animated fadeInUp">
+<div class="hid"  id="time"> 18:21:25</div></div>
+		<div class="animated fadeInUp">
+		<div class="hid" id="date">sunday, february 5</div></div>
+		<div class="animated fadeInUp"></div>
+		<div class="container">
+			      <center>
+		<div class="animated fadeInUp">			  
+
+</div>
+    </center>
+			<div class="animated fadeInUp">	
+			<ul class="list-inline social">
+
+				<li class="list-inline-item">
+					<a href="http://steamcommunity.com/groups/gaybhops" class="hid" target="_blank">
+						<i class="fab fa-steam-symbol" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="http://steamcommunity.com/id/progesterone/" class="hid"target="_blank">
+					<i class="far fa-heart" aria-hidden="true"></i>
+					</a>
+			</li>
+                <div id="main"><div class="links">
+            
+            <a href="#" onclick="start()" class="unhid" id="time">ENTER</a>
+        </div></div>
+                </ul>
+</div>
+			<footer>
+			</footer>
+            <script>
+                function start() {
+                    document.querySelectorAll(".hid").forEach(elem => {
+                        elem.className = elem.className.replace("hid", "");
+                    });
+
+                    document.querySelectorAll(".unhid").forEach(elem => {
+                        elem.className = elem.className.replace("unhid", "hid");
+                    });
+
+                    var vid = document.querySelector("video");
+                    vid.play();
+                }
+            </script>
+        	<script>
+				var x = document.getElementById("player").volume = 0.2;
+			</script>
+			<script src="jquery-2.1.4.min.js"></script>
+			<script src="title.js"></script>
+			<script src="main.js"></script>
+    
+		
+		
+		</main>
+						<div id="info"><marquee bgcolor="black" height="60" scrollamount="35"><p><p><div class="japanese3"></div>
+	
+
+	   <script>
+$(document).ready(function() {
+//Preloader
+$(window).load(function() {
+preloaderFadeOutTime = 1500;
+function hidePreloader() {
+var preloader = $('.cssload-container');
+preloader.fadeOut(preloaderFadeOutTime);
+
+}
+hidePreloader();
+});
+});
+</script>
+	
 </body>
-<head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <script language="JavaScript">
-      //////////F12 disable code////////////////////////
-          document.onkeypress = function (event) {
-              event = (event || window.event);
-              if (event.keyCode == 123) {
-                 //alert('No F-12');
-                  return false;
-              }
-          }
-          document.onmousedown = function (event) {
-              event = (event || window.event);
-              if (event.keyCode == 123) {
-                  //alert('No F-keys');
-                  return false;
-              }
-          }
-      document.onkeydown = function (event) {
-              event = (event || window.event);
-              if (event.keyCode == 123) {
-                  //alert('No F-keys');
-                  return false;
-              }
-          }
-      var message=":o";      
-      function clickIE() {if (document.all) {(message);return false;}}
-      function clickNS(e) {if
-      (document.layers||(document.getElementById&&!document.all)) {
-      if (e.which==2||e.which==3) {(message);return false;}}}
-      if (document.layers)
-      {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
-      else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
-      document.oncontextmenu=new Function("return false")
-      function disableCtrlKeyCombination(e)
-      {
-      var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'w');
-      var key;
-      var isCtrl;
-      if(window.event)
-      {
-      key = window.event.keyCode;
-      if(window.event.ctrlKey)
-      isCtrl = true;
-      else
-      isCtrl = false;
-      }
-      else
-      {
-      key = e.which;
-      if(e.ctrlKey)
-      isCtrl = true;
-      else
-      isCtrl = false;
-      }
-      if(isCtrl)
-      {
-      for(i=0; i<forbiddenKeys.length; i++)
-      {
-      if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
-      {
-      alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
-      return false;
-      }
-      }
-      }
-      return true;
-      }
-   </script>
-</head>
 </html>
